@@ -38,17 +38,17 @@
  /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/esp_rtos/espressif/include/esp8266/uart_register.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/esp_rtos/espressif/include/spi_flash.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/esp_rtos/espressif/include/version.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa_rtos/include/xtensa/xtruntime.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa_rtos/include/xtensa/config/core.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa_rtos/include/xtensa/hal.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa_rtos/include/xtensa/config/core-isa.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa_rtos/include/xtensa/config/core-matmap.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa_rtos/include/xtensa/config/tie.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa_rtos/include/xtensa/config/specreg.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa_rtos/include/xtensa/corebits.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa/include/xtensa/xtruntime.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa/include/xtensa/config/core.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa/include/xtensa/hal.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa/include/xtensa/config/core-isa.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa/include/xtensa/config/core-matmap.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa/include/xtensa/config/tie.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa/include/xtensa/config/specreg.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa/include/xtensa/corebits.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/esp_rtos/freertos/include/freertos/xtensa_rtos.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa_rtos/include/xtensa/config/system.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa_rtos/include/xtensa/simcall.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa/include/xtensa/config/system.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/xtensa/include/xtensa/simcall.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/esp_rtos/freertos/include/freertos/xtensa_context.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/esp_rtos/freertos/include/freertos/xtensa_timer.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/bsp/esp_rtos/freertos/include/freertos/mpu_wrappers.h \

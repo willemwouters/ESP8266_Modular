@@ -8,7 +8,7 @@
 # What to build
 BUILD_TYPE      ?= debug
 PROJECT_MODULES := blinky
-SDK_MODULES     := bsp/esp_rtos/lwip bsp/esp_rtos/espressif bsp/esp_rtos/freertos bsp/esp_rtos/udhcp  bsp/xtensa_rtos bsp/sdk bsp/esp_rtos/linker
+SDK_MODULES     := bsp/esp_rtos/lwip bsp/esp_rtos/espressif bsp/esp_rtos/freertos bsp/esp_rtos/udhcp  bsp/xtensa bsp/sdk bsp/esp_rtos/linker
 OTHER_MODULES   :=
 
 
