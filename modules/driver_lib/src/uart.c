@@ -170,7 +170,7 @@ uart0_tx_buffer(char *buf, int len)
 
 
 
-at_stateType  at_state;
+uart_stateType  at_state;
 
 
 #define at_recvTaskPrio        0
@@ -191,7 +191,7 @@ static void ICACHE_FLASH_ATTR
 at_procTask(os_event_t *events)
 {
 	uart_recv_line_cb(at_cmdLine);
-	at_state = at_statRecving;
+	at_state = uart_statRecving;
 	uart_receive_start = true;
 }
 
@@ -213,18 +213,18 @@ at_recvTask(os_event_t *events)
 
 		switch(at_state)
 		    {
-		    case at_statRecving:
+		    case uart_statRecving:
 		    	if(temp == '\n')
 				{
 					*pCmdLine = '\0';
 					pCmdLine++;
 					system_os_post(at_procTaskPrio, 0, 0);
-					at_state = at_statProcess;
+					at_state = uart_statProcess;
 				}
 		    	*pCmdLine = temp;
 		    	pCmdLine++;
 		    	break;
-		    case at_statProcess: // TODO create a buffer for char which still commin in
+		    case uart_statProcess: // TODO create a buffer for char which still commin in
 		    	os_printf("Wait... not finished yet...\n");
 		    	ETS_UART_INTR_ENABLE();
 		    	return;
@@ -289,7 +289,7 @@ uart_init(UartBautRate uart0_br, uart_recv_line uart_recv_line_cb_tmp, bool debu
     uart_config(UART0);
     system_os_task(at_recvTask, at_recvTaskPrio, at_recvTaskQueue, at_recvTaskQueueLen);
     system_os_task(at_procTask, at_procTaskPrio, at_procTaskQueue, at_procTaskQueueLen);
-    at_state = at_statRecving;
+    at_state = uart_statRecving;
     char* buff = (UartDev.rcv_buff.pRcvMsgBuff);
     os_memset(buff, 0, RX_BUFF_SIZE);
     ETS_UART_INTR_ENABLE();

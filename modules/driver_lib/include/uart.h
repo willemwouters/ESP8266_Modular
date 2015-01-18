@@ -77,13 +77,13 @@ typedef enum {
 } RcvMsgState;
 
 typedef enum{
-  at_statIdle,
-  at_statRecving,
-  at_statProcess,
-  at_statIpSending,
-  at_statIpSended,
-  at_statIpTraning
-}at_stateType;
+  uart_statIdle,
+  uart_statRecving,
+  uart_statProcess,
+  uart_statIpSending,
+  uart_statIpSended,
+  uart_statIpTraning
+}uart_stateType;
 
 typedef struct {
     UartBautRate 	     baut_rate;

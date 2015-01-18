@@ -1,8 +1,10 @@
 /home/wouters/GIT/willemwouters/ESP8266_Modular/projects/uart_example/build/debug/driver_lib/src/key.o: \
  src/key.c \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/espmissingincludes.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/ets_sys.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/c_types.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/eagle_soc.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/c_types.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/os_type.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/ets_sys.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/osapi.h \
@@ -26,7 +28,6 @@
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/lwip/include/lwip/debug.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/lwip/include/lwip/arch.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/lwip/include/arch/cc.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/c_types.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/lwip/include/lwip/def.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/queue.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/spi_flash.h \

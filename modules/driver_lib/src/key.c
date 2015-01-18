@@ -8,6 +8,11 @@
  * Modification history:
  *     2014/5/1, v1.0 create this file.
 *******************************************************************************/
+
+
+#include "espmissingincludes.h"
+#include "c_types.h"
+
 #include "ets_sys.h"
 #include "os_type.h"
 #include "osapi.h"
@@ -30,15 +35,17 @@ LOCAL void key_intr_handler(struct keys_param *keys);
  * Returns      : single_key_param - single key parameter, needed by key init
 *******************************************************************************/
 struct single_key_param *ICACHE_FLASH_ATTR
-key_init_single(uint8 gpio_id, uint32 gpio_name, uint8 gpio_func, key_function long_press, key_function short_press)
+key_init_single(uint8 gpio_id, uint32 gpio_name, uint8 gpio_func, key_function short_press, key_function long_press, uint32 shortDelay, uint32 longDelay)
 {
     struct single_key_param *single_key = (struct single_key_param *)os_zalloc(sizeof(struct single_key_param));
-
+    os_printf("-%s-%s \r\n", __FILE__, __func__);
     single_key->gpio_id = gpio_id;
     single_key->gpio_name = gpio_name;
     single_key->gpio_func = gpio_func;
     single_key->long_press = long_press;
     single_key->short_press = short_press;
+    single_key->shortDelay = shortDelay;
+    single_key->longDelay = longDelay;
 
     return single_key;
 }
@@ -53,6 +60,7 @@ void ICACHE_FLASH_ATTR
 key_init(struct keys_param *keys)
 {
     uint8 i;
+    os_printf("-%s-%s \r\n", __FILE__, __func__);
 
     ETS_GPIO_INTR_ATTACH(key_intr_handler, keys);
 
@@ -73,7 +81,7 @@ key_init(struct keys_param *keys)
         GPIO_REG_WRITE(GPIO_STATUS_W1TC_ADDRESS, BIT(keys->single_key[i]->gpio_id));
 
         //enable interrupt
-        gpio_pin_intr_state_set(GPIO_ID_PIN(keys->single_key[i]->gpio_id), GPIO_PIN_INTR_NEGEDGE);
+        gpio_pin_intr_state_set(GPIO_ID_PIN(keys->single_key[i]->gpio_id), GPIO_PIN_INTR_ANYEGDE);
     }
 
     ETS_GPIO_INTR_ENABLE();
@@ -88,7 +96,8 @@ key_init(struct keys_param *keys)
 LOCAL void ICACHE_FLASH_ATTR
 key_5s_cb(struct single_key_param *single_key)
 {
-    os_timer_disarm(&single_key->key_5s);
+    os_printf("-%s-%s \r\n", __FILE__, __func__);
+    os_timer_disarm(&single_key->key_long);
 
     // low, then restart
     if (0 == GPIO_INPUT_GET(GPIO_ID_PIN(single_key->gpio_id))) {
@@ -107,11 +116,12 @@ key_5s_cb(struct single_key_param *single_key)
 LOCAL void ICACHE_FLASH_ATTR
 key_50ms_cb(struct single_key_param *single_key)
 {
-    os_timer_disarm(&single_key->key_50ms);
+    os_printf("-%s-%s \r\n", __FILE__, __func__);
+    os_timer_disarm(&single_key->key_short);
 
     // high, then key is up
     if (1 == GPIO_INPUT_GET(GPIO_ID_PIN(single_key->gpio_id))) {
-        os_timer_disarm(&single_key->key_5s);
+        os_timer_disarm(&single_key->key_long);
         single_key->key_level = 1;
         gpio_pin_intr_state_set(GPIO_ID_PIN(single_key->gpio_id), GPIO_PIN_INTR_NEGEDGE);
 
@@ -134,6 +144,7 @@ key_intr_handler(struct keys_param *keys)
 {
     uint8 i;
     uint32 gpio_status = GPIO_REG_READ(GPIO_STATUS_ADDRESS);
+    os_printf("-%s-%s \r\n", __FILE__, __func__);
 
     for (i = 0; i < keys->key_num; i++) {
         if (gpio_status & BIT(keys->single_key[i]->gpio_id)) {
@@ -145,16 +156,16 @@ key_intr_handler(struct keys_param *keys)
 
             if (keys->single_key[i]->key_level == 1) {
                 // 5s, restart & enter softap mode
-                os_timer_disarm(&keys->single_key[i]->key_5s);
-                os_timer_setfn(&keys->single_key[i]->key_5s, (os_timer_func_t *)key_5s_cb, keys->single_key[i]);
-                os_timer_arm(&keys->single_key[i]->key_5s, 5000, 0);
+                os_timer_disarm(&keys->single_key[i]->key_long);
+                os_timer_setfn(&keys->single_key[i]->key_long, (os_timer_func_t *)key_5s_cb, keys->single_key[i]);
+                os_timer_arm(&keys->single_key[i]->key_long, keys->single_key[i]->longDelay, 0);
                 keys->single_key[i]->key_level = 0;
                 gpio_pin_intr_state_set(GPIO_ID_PIN(keys->single_key[i]->gpio_id), GPIO_PIN_INTR_POSEDGE);
             } else {
                 // 50ms, check if this is a real key up
-                os_timer_disarm(&keys->single_key[i]->key_50ms);
-                os_timer_setfn(&keys->single_key[i]->key_50ms, (os_timer_func_t *)key_50ms_cb, keys->single_key[i]);
-                os_timer_arm(&keys->single_key[i]->key_50ms, 50, 0);
+                os_timer_disarm(&keys->single_key[i]->key_short);
+                os_timer_setfn(&keys->single_key[i]->key_short, (os_timer_func_t *)key_50ms_cb, keys->single_key[i]);
+                os_timer_arm(&keys->single_key[i]->key_short, keys->single_key[i]->shortDelay, 0);
             }
         }
     }
