@@ -15,7 +15,7 @@
 #include "gpio.h"
 #include "user_interface.h"
 
-#include "driver/key.h"
+#include "key.h"
 
 LOCAL void key_intr_handler(struct keys_param *keys);
 

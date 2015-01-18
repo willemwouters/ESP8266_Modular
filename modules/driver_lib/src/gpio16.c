@@ -1,6 +1,6 @@
 #include "ets_sys.h"
 #include "osapi.h"
-#include "driver/gpio16.h"
+#include "gpio16.h"
 
 void ICACHE_FLASH_ATTR
 gpio16_output_conf(void)

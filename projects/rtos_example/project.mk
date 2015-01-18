@@ -8,7 +8,7 @@
 # What to build
 BUILD_TYPE      ?= debug
 PROJECT_MODULES := user
-SDK_MODULES     := lwip espressif freertos udhcp core linker
+SDK_MODULES     := lwip freertos udhcp core linker
 SDK_MODULES := $(addprefix sdk_rtos/,$(SDK_MODULES))
 OTHER_MODULES   := 
 INCDIR  += $(abspath modules/xtensa/include)

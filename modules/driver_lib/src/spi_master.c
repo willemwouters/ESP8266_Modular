@@ -10,7 +10,7 @@
 *******************************************************************************/
 #include "ets_sys.h"
 #include "osapi.h"
-#include "driver/spi_master.h"
+#include "spi_master.h"
 
 void ICACHE_FLASH_ATTR
 spi_master_init(uint8 spi_no)

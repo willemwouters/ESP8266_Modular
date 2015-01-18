@@ -11,7 +11,7 @@
 *******************************************************************************/
 #include "ets_sys.h"
 #include "osapi.h"
-#include "driver/uart.h"
+#include "uart.h"
 #include "os_type.h"
 
 #define UART0   0

@@ -13,7 +13,7 @@
 #include "osapi.h"
 
 #include "user_interface.h"
-#include "driver/pwm.h"
+#include "pwm.h"
 
 LOCAL struct pwm_single_param pwm_single_toggle[2][PWM_CHANNEL + 1];
 LOCAL struct pwm_single_param *pwm_single;

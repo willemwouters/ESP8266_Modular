@@ -6,7 +6,7 @@
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_rtos/lwip/include/lwip/lwip/debug.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_rtos/lwip/include/lwip/lwip/arch.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_rtos/lwip/include/lwip/arch/cc.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_rtos/espressif/include/c_types.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_rtos/core/include/c_types.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_rtos/lwip/include/lwip/lwip/netif.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_rtos/lwip/include/lwip/lwip/err.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_rtos/lwip/include/lwip/lwip/ip_addr.h \

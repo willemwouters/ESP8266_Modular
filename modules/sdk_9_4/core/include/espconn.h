@@ -87,11 +87,6 @@ struct espconn {
     void *reverse;
 };
 
-enum espconn_option{
-	ESPCONN_REUSEADDR = 1,
-	ESPCONN_END
-};
-
 /******************************************************************************
  * FunctionName : espconn_connect
  * Description  : The function given as the connect
@@ -269,16 +264,6 @@ sint8 espconn_regist_disconcb(struct espconn *espconn, espconn_connect_callback 
 *******************************************************************************/
 
 uint32 espconn_port(void);
-
-/******************************************************************************
- * FunctionName : espconn_set_opt
- * Description  : access port value for client so that we don't end up bouncing
- *                all connections at the same time .
- * Parameters   : none
- * Returns      : access port value
-*******************************************************************************/
-
-sint8 espconn_set_opt(struct espconn *espconn, uint8 opt);
 
 /******************************************************************************
  * TypedefName : dns_found_callback
