@@ -1,0 +1,21 @@
+/home/wouters/GIT/willemwouters/ESP8266_Modular/projects/frankenstein_usage/build/debug/frankenstein/src/microrl.o: \
+ src/microrl.c \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/string.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/_ansi.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/newlib.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/sys/config.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/machine/ieeefp.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/sys/reent.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/_ansi.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/sys/_types.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/sys/lock.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/ctype.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/stdlib.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/machine/stdlib.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/alloca.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/frankenstein/include/microrl.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/frankenstein/include/config.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/stdio.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/sys/types.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/machine/types.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/sys/stdio.h
