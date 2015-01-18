@@ -17,4 +17,4 @@ LIBS    += $(MODULE_NAME)
 # Append the library paths to LIBDIR
 LIBDIR  += $(MODULE_BUILD_PATH)/lib
 # Append the include paths to INCDIR
-INCDIR  += $(MODULE_PATH)/include
+INCDIR  += $(MODULE_PATH)/include $(MODULE_PATH)/../sdk_9_4/lwip/include/lwip

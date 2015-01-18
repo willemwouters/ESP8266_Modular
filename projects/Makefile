@@ -6,6 +6,8 @@ all:
 	make -C ./uart_example
 	make -C ./simple_examples/gpiointerrupt_tcpsend
 	make -C ./simple_examples/uart_send
+	make -C ./simple_examples/uart_tcpsend_onreceive
+
 
 clean:
 	make -C ./simple_examples/blinky clean
@@ -15,3 +17,4 @@ clean:
 	make -C ./simple_examples/uart_send clean
 	make -C ./uart_example clean
 	make -C ./simple_examples/gpiointerrupt_tcpsend clean
+	make -C ./simple_examples/uart_tcpsend_onreceive clean
