@@ -4,10 +4,10 @@
 #
 # This makefile is to be invoked by a project makefile.
 #
-
+INCDIR      :=
 
 $(if $(PROJECT_PATH),,$(error PROJECT_PATH variable not set))
-include $(PROJECT_PATH)/host.mk
+include ./tools/host.mk
 include $(PROJECT_PATH)/project.mk
 $(if $(BUILD_TYPE),,$(error BUILD_TYPE variable not set))
 
@@ -19,11 +19,11 @@ STAGE1_IMG  := $(BUILD_PATH)/$(BUILD_TYPE)_stage1.bin
 STAGE2_IMG  := $(BUILD_PATH)/$(BUILD_TYPE)_stage2.bin
 
 #The complete list of modules, used by the project.
-MODULES      := $(addprefix $(PROJECT_PATH)/,$(PROJECT_MODULES)) $(abspath $(SDK_MODULES)) $(OTHER_MODULES)
+MODULES      := $(addprefix $(PROJECT_PATH)/,$(PROJECT_MODULES)) $(abspath $(addprefix modules/,$(SDK_MODULES))) $(addprefix modules/,$(OTHER_MODULES))
 
 #The LIBS, LIBDIR and INCDIR are initialized here and filled by the modules.
 LIBS        := gcc
-INCDIR      :=
+
 LIBDIR      :=
 
 # Have each module append to the LIBS, LIBDIR and INCDIR lists.
@@ -52,16 +52,17 @@ export BUILD_PATH
 .PHONY: all upload clean $(MODULES)
 
 all: $(STAGE1_IMG) $(STAGE2_IMG)
-
+	@echo "Build complete"
+	
 flash: $(STAGE1_IMG) $(STAGE2_IMG)
 	$(ESP_TOOL) --port $(ESP_PORT) write_flash 0x00000 $(STAGE1_IMG) 0x40000 $(STAGE2_IMG)
 
 $(STAGE1_IMG): $(ELF)
 	$(FW_TOOL) -eo $< -bo $@ -bs .text -bs .data -bs .rodata -bc -ec
-
+	
 $(STAGE2_IMG): $(ELF)
 	$(FW_TOOL) -eo $< -es .irom0.text $@ -ec
-
+	
 $(ELF): $(BUILD_PATH)/build
 	@mkdir -p $(dir $@)
 	$(LD) $(LDFLAGS) -o $@
