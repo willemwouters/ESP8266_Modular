@@ -29,7 +29,7 @@
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/queue.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/spi_flash.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/driver_lib/include/io.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/driver_lib/include/TcpClient.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/tcp_utils/include/TcpClient.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/espconn.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/driver_lib/include/ipconfig.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/driver_lib/include/uart.h \

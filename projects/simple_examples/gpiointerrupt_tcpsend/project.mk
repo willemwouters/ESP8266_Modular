@@ -9,7 +9,7 @@
 BUILD_TYPE      ?= debug
 PROJECT_MODULES := user
 SDK_MODULES     := core linker lwip upgrade 
-SDK_MODULES := $(addprefix sdk_9_4/,$(SDK_MODULES)) xtensa driver_lib
+SDK_MODULES := $(addprefix sdk_9_4/,$(SDK_MODULES)) xtensa driver_lib tcp_utils
 OTHER_MODULES   := 
 INCDIR  += $(abspath modules/xtensa/include)
 

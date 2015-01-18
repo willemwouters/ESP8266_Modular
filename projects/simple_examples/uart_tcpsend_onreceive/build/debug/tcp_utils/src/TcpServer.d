@@ -1,6 +1,6 @@
-/home/wouters/GIT/willemwouters/ESP8266_Modular/projects/simple_examples/gpiointerrupt_tcpsend/build/debug/driver_lib/src/TcpServer.o: \
+/home/wouters/GIT/willemwouters/ESP8266_Modular/projects/simple_examples/uart_tcpsend_onreceive/build/debug/tcp_utils/src/TcpServer.o: \
  src/TcpServer.c \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/driver_lib/include/TcpServer.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/tcp_utils/include/TcpServer.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/driver_lib/../sdk_9_4/lwip/include/lwip/ip_addr.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/lwip/include/lwip/opt.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/lwip/include/lwipopts.h \
@@ -21,11 +21,10 @@
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/_ansi.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/sys/_types.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/xtensa/include/sys/lock.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/projects/simple_examples/gpiointerrupt_tcpsend/user/include/user_config.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/projects/simple_examples/uart_tcpsend_onreceive/user/include/user_config.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/lwip/include/lwip/def.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/driver_lib/include/ipconfig.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/espconn.h \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/driver_lib/include/ipconfig.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/user_interface.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/os_type.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/core/include/ets_sys.h \

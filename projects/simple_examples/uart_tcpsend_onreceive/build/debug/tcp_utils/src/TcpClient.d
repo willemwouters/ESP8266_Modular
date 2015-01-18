@@ -1,6 +1,6 @@
-/home/wouters/GIT/willemwouters/ESP8266_Modular/projects/simple_examples/uart_tcpsend_onreceive/build/debug/driver_lib/src/TcpClient.o: \
+/home/wouters/GIT/willemwouters/ESP8266_Modular/projects/simple_examples/uart_tcpsend_onreceive/build/debug/tcp_utils/src/TcpClient.o: \
  src/TcpClient.c \
- /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/driver_lib/include/TcpClient.h \
+ /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/tcp_utils/include/TcpClient.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/lwip/include/lwip/ip_addr.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/lwip/include/lwip/opt.h \
  /home/wouters/GIT/willemwouters/ESP8266_Modular/modules/sdk_9_4/lwip/include/lwipopts.h \
